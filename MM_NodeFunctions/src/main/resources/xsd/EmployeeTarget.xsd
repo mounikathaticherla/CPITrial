@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="EmployeeData">
+   <xs:complexType>
+      <xs:sequence>
+        <xs:element name="EmpRecord" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Header">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="EmpID" type="xs:integer"/>
+                    <xs:element name="EmpName" type="xs:string"/>
+                    <xs:element name="EmpDOB" type="xs:string"/>
+                    <xs:element name="EmpAddr" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Item" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="EmpSalryMonth" type="xs:string"/>
+                    <xs:element name="EmpSlary" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
