@@ -647,7 +647,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>wrapContent</key>
-                    <value>data</value>
+                    <value/>
                 </ifl:property>
                 <ifl:property>
                     <key>componentVersion</key>
@@ -711,15 +711,15 @@
                 <dc:Bounds height="137.0" width="708.0" x="137.0" y="124.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_22" id="BPMNShape_CallActivity_22">
-                <dc:Bounds height="60.0" width="100.0" x="569.0" y="174.0"/>
+                <dc:Bounds height="60.0" width="100.0" x="548.0" y="174.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_19" id="BPMNEdge_SequenceFlow_19" sourceElement="BPMNShape_CallActivity_18" targetElement="BPMNShape_ServiceTask_14">
                 <di:waypoint x="349.0" xsi:type="dc:Point" y="204.0"/>
                 <di:waypoint x="409.0" xsi:type="dc:Point" y="204.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_15" id="BPMNEdge_SequenceFlow_15" sourceElement="BPMNShape_ServiceTask_14" targetElement="BPMNShape_CallActivity_22">
-                <di:waypoint x="509.0" xsi:type="dc:Point" y="204.0"/>
-                <di:waypoint x="569.0" xsi:type="dc:Point" y="204.0"/>
+                <di:waypoint x="459.0" xsi:type="dc:Point" y="204.0"/>
+                <di:waypoint x="598.0" xsi:type="dc:Point" y="204.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_13" id="BPMNEdge_SequenceFlow_13" sourceElement="BPMNShape_StartEvent_2" targetElement="BPMNShape_CallActivity_18">
                 <di:waypoint x="189.0" xsi:type="dc:Point" y="204.0"/>
@@ -738,8 +738,8 @@
                 <di:waypoint x="173.0" xsi:type="dc:Point" y="204.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_23" id="BPMNEdge_SequenceFlow_23" sourceElement="BPMNShape_CallActivity_22" targetElement="BPMNShape_EndEvent_2">
-                <di:waypoint x="669.0" xsi:type="dc:Point" y="204.0"/>
-                <di:waypoint x="729.0" xsi:type="dc:Point" y="204.0"/>
+                <di:waypoint x="598.0" xsi:type="dc:Point" y="204.0"/>
+                <di:waypoint x="745.0" xsi:type="dc:Point" y="204.0"/>
             </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
