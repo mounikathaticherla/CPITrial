@@ -387,7 +387,7 @@ Mounika.</value>
                     <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_40</bpmn2:incoming>
+            <bpmn2:incoming>SequenceFlow_42</bpmn2:incoming>
             <bpmn2:messageEventDefinition/>
         </bpmn2:endEvent>
         <bpmn2:callActivity id="CallActivity_5" name="Content Modifier 1">
@@ -458,6 +458,28 @@ Mounika.</value>
             <bpmn2:incoming>SequenceFlow_38</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_40</bpmn2:outgoing>
         </bpmn2:callActivity>
+        <bpmn2:exclusiveGateway id="ExclusiveGateway_41" name="Router 1">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ExclusiveGateway</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::ExclusiveGateway/version::1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>throwException</key>
+                    <value>false</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_40</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_42</bpmn2:outgoing>
+        </bpmn2:exclusiveGateway>
         <bpmn2:startEvent id="StartEvent_2" name="Start">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -473,7 +495,24 @@ Mounika.</value>
             <bpmn2:messageEventDefinition/>
         </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_38" sourceRef="CallActivity_5" targetRef="CallActivity_39"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_40" sourceRef="CallActivity_39" targetRef="EndEvent_2"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_40" sourceRef="CallActivity_39" targetRef="ExclusiveGateway_41"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_42" name="Route 1" sourceRef="ExclusiveGateway_41" targetRef="EndEvent_2">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>expressionType</key>
+                    <value>XML</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_42_1785231838857" xsi:type="bpmn2:tFormalExpression"/>
+        </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="StartEvent_2" targetRef="CallActivity_5"/>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
@@ -499,6 +538,9 @@ Mounika.</value>
             <bpmndi:BPMNShape bpmnElement="CallActivity_39" id="BPMNShape_CallActivity_39">
                 <dc:Bounds height="60.0" width="100.0" x="516.0" y="128.0"/>
             </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="ExclusiveGateway_41" id="BPMNShape_ExclusiveGateway_41">
+                <dc:Bounds height="40.0" width="40.0" x="641.0" y="138.0"/>
+            </bpmndi:BPMNShape>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_38" id="BPMNEdge_SequenceFlow_38" sourceElement="BPMNShape_CallActivity_5" targetElement="BPMNShape_CallActivity_39">
                 <di:waypoint x="416.0" xsi:type="dc:Point" y="158.0"/>
                 <di:waypoint x="566.0" xsi:type="dc:Point" y="158.0"/>
@@ -506,6 +548,10 @@ Mounika.</value>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_3" id="BPMNEdge_SequenceFlow_3" sourceElement="BPMNShape_StartEvent_2" targetElement="BPMNShape_CallActivity_5">
                 <di:waypoint x="308.0" xsi:type="dc:Point" y="158.0"/>
                 <di:waypoint x="416.0" xsi:type="dc:Point" y="158.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_40" id="BPMNEdge_SequenceFlow_40" sourceElement="BPMNShape_CallActivity_39" targetElement="BPMNShape_ExclusiveGateway_41">
+                <di:waypoint x="566.0" xsi:type="dc:Point" y="158.0"/>
+                <di:waypoint x="661.0" xsi:type="dc:Point" y="158.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="MessageFlow_13" id="BPMNEdge_MessageFlow_13" sourceElement="BPMNShape_EndEvent_2" targetElement="BPMNShape_Participant_2">
                 <di:waypoint x="719.0" xsi:type="dc:Point" y="158.0"/>
@@ -515,8 +561,8 @@ Mounika.</value>
                 <di:waypoint x="90.0" xsi:type="dc:Point" y="170.0"/>
                 <di:waypoint x="308.0" xsi:type="dc:Point" y="158.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_40" id="BPMNEdge_SequenceFlow_40" sourceElement="BPMNShape_CallActivity_39" targetElement="BPMNShape_EndEvent_2">
-                <di:waypoint x="566.0" xsi:type="dc:Point" y="158.0"/>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_42" id="BPMNEdge_SequenceFlow_42" sourceElement="BPMNShape_ExclusiveGateway_41" targetElement="BPMNShape_EndEvent_2">
+                <di:waypoint x="661.0" xsi:type="dc:Point" y="158.0"/>
                 <di:waypoint x="719.0" xsi:type="dc:Point" y="158.0"/>
             </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
