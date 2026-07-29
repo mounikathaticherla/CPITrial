@@ -135,46 +135,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>wrapContent</key>
-                    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;ns0:ProductHierarchy xmlns:ns0="http://demo.sap.com/mapping/context"&gt;
-    &lt;MainCategory Name="Printers and Scanners"&gt;
-        &lt;Category Name="Multifunction printers"&gt;
-           &lt;Product&gt;Multi Print&lt;/Product&gt;
-           &lt;Product&gt;Multi Color&lt;/Product&gt;
-        &lt;/Category&gt;
-        &lt;Category Name="Scanners"&gt;
-            &lt;Product&gt;Power Scan&lt;/Product&gt;
-            &lt;Product&gt;Photo Scan&lt;/Product&gt;
-        &lt;/Category&gt; 
-    &lt;/MainCategory&gt;
-    &lt;MainCategory Name="Computer systems"&gt;
-        &lt;Category Name="Computer system accessories"&gt;
-            &lt;Product&gt;Notebook Lock&lt;/Product&gt;
-            &lt;Product&gt;USB Stick 1 GB&lt;/Product&gt;
-            &lt;Product&gt;USB Stick 2 GB&lt;/Product&gt;
-            &lt;Product&gt;Web cam reality&lt;/Product&gt;
-        &lt;/Category&gt;
-        &lt;Category Name="Notebooks"&gt;
-            &lt;Product&gt;Notebook Basic 15&lt;/Product&gt;
-            &lt;Product&gt;Notebook Pro 15&lt;/Product&gt;
-        &lt;/Category&gt;
-        &lt;Category Name="PCs"&gt;
-            &lt;Product&gt;Gaming Monster&lt;/Product&gt;
-            &lt;Product&gt;Gaming Monster Pro&lt;/Product&gt;
-        &lt;/Category&gt;     
-    &lt;/MainCategory&gt;
-    &lt;MainCategory Name="Audio components"&gt;
-        &lt;Category Name="Microphones"&gt;
-            &lt;Product&gt;Thunder GX&lt;/Product&gt;
-            &lt;Product&gt;Gladiator MX&lt;/Product&gt;
-        &lt;/Category&gt;
-        &lt;Category Name="Telecommunication"&gt;
-            &lt;Product&gt;Modem Hyper Speed&lt;/Product&gt;
-            &lt;Product&gt;ADSL progress T1&lt;/Product&gt;
-            &lt;Product&gt;ISDN direct&lt;/Product&gt;
-        &lt;/Category&gt; 
-    &lt;/MainCategory&gt;
-&lt;/ns0:ProductHierarchy&gt;</value>
+                    <value/>
                 </ifl:property>
                 <ifl:property>
                     <key>componentVersion</key>
@@ -194,7 +155,7 @@
         </bpmn2:callActivity>
         <bpmn2:startEvent id="StartEvent_4" name="Start Timer 1">
             <bpmn2:outgoing>SequenceFlow_5</bpmn2:outgoing>
-            <bpmn2:timerEventDefinition id="TimerEventDefinition_365539">
+            <bpmn2:timerEventDefinition id="TimerEventDefinition_99561">
                 <bpmn2:extensionElements>
                     <ifl:property>
                         <key>scheduleKey</key>
@@ -267,8 +228,17 @@
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
+            <bpmndi:BPMNShape bpmnElement="CallActivity_10" id="BPMNShape_CallActivity_10">
+                <dc:Bounds height="60.0" width="100.0" x="553.0" y="132.0"/>
+            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="EndEvent_2" id="BPMNShape_EndEvent_2">
                 <dc:Bounds height="32.0" width="32.0" x="703.0" y="142.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_7" id="BPMNShape_CallActivity_7">
+                <dc:Bounds height="60.0" width="100.0" x="403.0" y="132.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="StartEvent_4" id="BPMNShape_StartEvent_4">
+                <dc:Bounds height="32.0" width="32.0" x="283.0" y="142.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_2" id="BPMNShape_Participant_2">
                 <dc:Bounds height="140.0" width="100.0" x="900.0" y="100.0"/>
@@ -278,15 +248,6 @@
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_Process_1" id="BPMNShape_Participant_Process_1">
                 <dc:Bounds height="220.0" width="574.0" x="245.0" y="60.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="StartEvent_4" id="BPMNShape_StartEvent_4">
-                <dc:Bounds height="32.0" width="32.0" x="283.0" y="142.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="CallActivity_7" id="BPMNShape_CallActivity_7">
-                <dc:Bounds height="60.0" width="100.0" x="403.0" y="132.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="CallActivity_10" id="BPMNShape_CallActivity_10">
-                <dc:Bounds height="60.0" width="100.0" x="553.0" y="132.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_5" id="BPMNEdge_SequenceFlow_5" sourceElement="BPMNShape_StartEvent_4" targetElement="BPMNShape_CallActivity_7">
                 <di:waypoint x="299.0" xsi:type="dc:Point" y="160.0"/>
